@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "9713ba6e-54c3-4055-b2bd-05de5fe3023f": {
+      "ProjectGuid": "9713ba6e-54c3-4055-b2bd-05de5fe3023f",
+      "DisplayName": "RestaurantAPI",
+      "ColorIndex": 0
+    },
+    "4b2535e9-1e9b-4f2c-9798-d59358aeb26b": {
+      "ProjectGuid": "4b2535e9-1e9b-4f2c-9798-d59358aeb26b",
+      "DisplayName": "RestaurantDAL",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "4f9c0171-a833-45bf-8375-61fbf9b86014": {
+      "ProjectGuid": "4f9c0171-a833-45bf-8375-61fbf9b86014",
+      "DisplayName": "RestaurantDAL",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
