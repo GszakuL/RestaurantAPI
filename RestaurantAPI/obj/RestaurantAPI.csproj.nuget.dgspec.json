@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\repos\\RestaurantApi\\RestaurantAPI\\RestaurantAPI.csproj": {}
+    "C:\\RestaurantAPI\\RestaurantAPI\\RestaurantAPI.csproj": {}
   },
   "projects": {
-    "C:\\repos\\RestaurantApi\\RestaurantAPI\\RestaurantAPI.csproj": {
+    "C:\\RestaurantAPI\\RestaurantAPI\\RestaurantAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\RestaurantApi\\RestaurantAPI\\RestaurantAPI.csproj",
+        "projectUniqueName": "C:\\RestaurantAPI\\RestaurantAPI\\RestaurantAPI.csproj",
         "projectName": "RestaurantAPI",
-        "projectPath": "C:\\repos\\RestaurantApi\\RestaurantAPI\\RestaurantAPI.csproj",
+        "projectPath": "C:\\RestaurantAPI\\RestaurantAPI\\RestaurantAPI.csproj",
         "packagesPath": "C:\\Users\\lukas\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\RestaurantApi\\RestaurantAPI\\obj\\",
+        "outputPath": "C:\\RestaurantAPI\\RestaurantAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\repos\\RestaurantApi\\RestaurantDAL\\RestaurantDAL.csproj": {
-                "projectPath": "C:\\repos\\RestaurantApi\\RestaurantDAL\\RestaurantDAL.csproj"
+              "C:\\RestaurantAPI\\RestaurantDAL\\RestaurantDAL.csproj": {
+                "projectPath": "C:\\RestaurantAPI\\RestaurantDAL\\RestaurantDAL.csproj"
               }
             }
           }
@@ -99,14 +99,14 @@
         }
       }
     },
-    "C:\\repos\\RestaurantApi\\RestaurantDAL\\RestaurantDAL.csproj": {
+    "C:\\RestaurantAPI\\RestaurantDAL\\RestaurantDAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\RestaurantApi\\RestaurantDAL\\RestaurantDAL.csproj",
+        "projectUniqueName": "C:\\RestaurantAPI\\RestaurantDAL\\RestaurantDAL.csproj",
         "projectName": "RestaurantDAL",
-        "projectPath": "C:\\repos\\RestaurantApi\\RestaurantDAL\\RestaurantDAL.csproj",
+        "projectPath": "C:\\RestaurantAPI\\RestaurantDAL\\RestaurantDAL.csproj",
         "packagesPath": "C:\\Users\\lukas\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\RestaurantApi\\RestaurantDAL\\obj\\",
+        "outputPath": "C:\\RestaurantAPI\\RestaurantDAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
