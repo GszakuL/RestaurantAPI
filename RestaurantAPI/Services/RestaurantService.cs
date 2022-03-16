@@ -37,31 +37,38 @@ namespace RestaurantAPI.Services
             return result;
         }
 
-        public IEnumerable<RestaurantDto> GetAll(string searchPhase)
+        public PagedResult<RestaurantDto> GetAll(RestaurantQuery query)
         {
-            var restaurants = _dbContext
+            var baseQuery = _dbContext
                 .Restaurants
                 .Include(r => r.Address)
                 .Include(r => r.Dishes)
-                .Where(r => searchPhase == null || (r.Name.ToLower().Contains(searchPhase.ToLower()) || r.Category.ToLower().Contains(searchPhase)))
+                .Where(r => query.SearchPhrase == null || (r.Name.ToLower().Contains(query.SearchPhrase.ToLower()) || r.Category.ToLower().Contains(query.SearchPhrase.ToLower())));
+
+            var restaurants = baseQuery
+                .Skip(query.PageSize * (query.PageNumber - 1))
+                .Take(query.PageSize)
                 .ToList();
+
+            var totalItemsCount = baseQuery.Count();
 
             var restaurantsDto = _mapper.Map<List<RestaurantDto>>(restaurants);
 
-            return restaurantsDto;
+            var result = new PagedResult<RestaurantDto>(restaurantsDto, totalItemsCount, query.PageSize, query.PageNumber);
+
+            return result;
         }
 
-        public int CreateRestaurant(CreateRestaurantDto dto)
+        public void CreateRestaurant(CreateRestaurantDto dto)
         {
             var validationResult = _validatorCreate.Validate(dto);
 
             if (!validationResult.IsValid)
-                throw new Exceptions.ValidationException("Invalid data: "+validationResult.Errors.ToString());
+                throw new Exceptions.ValidationException(string.Concat(validationResult.Errors));
 
             var restaurant = _mapper.Map<Restaurant>(dto);
             _dbContext.Restaurants.Add(restaurant);
             _dbContext.SaveChanges();
-            return restaurant.Id;
         }
 
         public void DeleteRestaurant(int id)

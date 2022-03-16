@@ -12,6 +12,7 @@ namespace RestaurantAPI.Controllers
 {
     
     [Route("api/restaurants")]
+    [ApiController]
     [Authorize]
     public class RestaurantController : ControllerBase
     {
@@ -23,24 +24,25 @@ namespace RestaurantAPI.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "Administrator,Manager")]
+        //[Authorize(Roles = "Administrator,Manager")]
+        [AllowAnonymous]
         public ActionResult CreateRestaurant([FromBody] CreateRestaurantDto dto)
         {    
-            var id = _restaurantService.CreateRestaurant(dto);
+            _restaurantService.CreateRestaurant(dto);
             return Ok("Restaurant created");
         }
 
         [HttpGet]
         [AllowAnonymous]
-        public ActionResult<IEnumerable<Restaurant>> GetAll([FromQuery]string searchPhase)
+        public ActionResult<IEnumerable<RestaurantDto>> GetAll([FromQuery]RestaurantQuery query)
         {
-            var restaurants = _restaurantService.GetAll(searchPhase);
+            var restaurants = _restaurantService.GetAll(query);
             return Ok(restaurants);
         }
         
         [HttpGet("{id}")]
         [AllowAnonymous]
-        public ActionResult<Restaurant> GetById([FromRoute] int id)
+        public ActionResult<RestaurantDto> GetById([FromRoute] int id)
         {
             var restaurant = _restaurantService.GetById(id);
 

@@ -10,8 +10,7 @@ namespace RestaurantAPI.Validators
             RuleFor(x => x.Name)
                 .NotNull()
                 .NotEmpty()
-                .MaximumLength(25)
-                .WithMessage("Must be 25 chars long");
+                .MaximumLength(25);
 
             RuleFor(x => x.City)
                 .NotNull()
